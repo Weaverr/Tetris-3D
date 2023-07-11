@@ -16,7 +16,7 @@ function setup() {
   myTetrisgridL = new Tetrisgrid(110, 300, 0, 54, -150, 1, 0, 90, 255, {r: 0, g: 0, b: 0});
   myTetrisgridR = new Tetrisgrid(111, 300, 0,  0, -150, -54, 0, 0, 255, {r: 0, g: 0, b: 0});
   myTetrisgridF = new Tetrisgrid(111, 110, 0,  0, 0, 1, 90, 0, 255, {r: 0, g: 0, b: 0});
-  setInterval( () => demoGravity(), timer)
+  setInterval( () => Gravity(), timer)
   cam1 = new devCam(-250, -300, 250, 0, -100, 0);
   cam2 = new devCam(-300, 0, 0, 0, 0, 0)
   cam3 = new devCam(0, 0, 300, 0, 0, 0)
@@ -29,7 +29,7 @@ function cam() {
 }
 
 
-let demoGravity = () => {
+let Gravity = () => {
   myDemopeice.y += 10
 
   if (myDemopeice.y >= myTetrisgridF.y - 5) {
